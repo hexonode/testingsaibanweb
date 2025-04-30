@@ -1433,37 +1433,40 @@ footer {
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
-    /* Navigation */
-    nav {
-        padding: 1rem;
+    .mobile-home-button {
+        display: flex;
     }
-
+    
     .nav-links {
-        display: none;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(0, 188, 212, 0.95);
         flex-direction: column;
         padding: 1rem;
         gap: 0.5rem;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
     }
-
+    
     .nav-links.active {
-        display: flex;
+        transform: translateY(0);
     }
-
-    .nav-links a {
-        width: 100%;
-        text-align: center;
+    
+    nav {
+        flex-direction: column;
         padding: 1rem;
     }
 
-    /* Hero Section */
-    .hero.welcome-page {
-        height: 60vh;
-        padding-top: 80px;
+    .nav-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .nav-links a {
+        text-align: center;
+        padding: 0.8rem;
     }
 
     .hero h2 {
@@ -1487,6 +1490,7 @@ footer {
     .cta-button {
         width: 100%;
         text-align: center;
+        padding: 1rem;
     }
 
     /* Services Section */
